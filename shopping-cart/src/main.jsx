@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-import Home from './componentes/home/home'
-import Cart from './componentes/cart/cart'
+import Home from './pages/home/home.jsx'
+import Cart from './pages/cart/cart.jsx'
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Favoritos from './pages/favoritos/favoritos.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       },
       {
         path:"/favoritos",
+        element:<Favoritos/>
+      },
+      {
+        path:"/carrinho",
         element:<Cart/>
       }
     ]

@@ -1,14 +1,15 @@
-import {useEffect, useState} from 'react'
-import Loading from "../loading/loading"
+import {useEffect, useContext} from 'react'
+import Loading from "../../componentes/loading/loading"
 import SearchData from '../../api/SearchData';
-import ProductCard from "../ProductCard/ProductCard"
+import ProductCard from "../../componentes/ProductCard/ProductCard"
+
+import AppContext from '../../context/AppContext';
 
 import "./home.css"
 
 
 const home = () => {
-    const [products, setProducts] = useState([])
-    const [loading, setLoading] = useState(false)
+  const { products, setProducts, loading, setLoading } = useContext(AppContext);
 
 
 
